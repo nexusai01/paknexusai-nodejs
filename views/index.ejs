@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PakNexusAI – World-Class AI Content, Crafted in Pakistan</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" />
+
+    <meta name="description" content="PakNexusAI – AI-powered content creation platform. Generate blogs, social media, and marketing copy in seconds." />
+
+    <style>
+        /* === Futuristic Animated Background === */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at 20% 20%, #0d0f1a, #0b0e13);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* === FLOATING ORBS === */
+        .background-lines {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, #0d0f1a, #0b0e13);
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15), transparent 70%);
+            top: 10%;
+            left: 10%;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.1), transparent 70%);
+            bottom: 10%;
+            right: 10%;
+            animation-delay: -3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Glass + Glow Effect */
+        .glass {
+            background: rgba(15, 15, 30, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 25px rgba(147, 51, 234, 0.2), 0 0 35px rgba(34, 197, 94, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+        }
+
+        /* Neon border hover */
+        .neon-hover:hover {
+            box-shadow: 0 0 15px #9333ea, 0 0 25px #22c55e;
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans">
+    <!-- BACKGROUND WITH ORBS -->
+    <div class="background-lines">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <!-- All main content -->
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <header class="glass flex justify-between items-center px-6 py-4 border-b border-gray-800 mx-4 mt-4 rounded-2xl">
+            <h1 class="text-2xl font-bold text-purple-400">PakNexusAI</h1>
+            <nav class="space-x-6 text-gray-300">
+                <a href="#" class="hover:text-purple-400">Features</a>
+                <a href="#" class="hover:text-purple-400">Pricing</a>
+                <a href="#" class="hover:text-purple-400">Use Cases</a>
+                <a href="#" class="hover:text-purple-400">Blog</a>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">Login</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="text-center py-24 px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                Unleash World-Class
+                <span class="text-purple-400">AI Content</span><br />
+                Crafted in Pakistan 🇵🇰
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-8">
+                Generate blogs, social media, and marketing copy in seconds – powered by advanced AI.
+            </p>
+
+            <!-- Waitlist Card -->
+            <div class="glass neon-hover border border-purple-500 max-w-md mx-auto p-6">
+                <h3 class="text-xl font-semibold mb-4">Join the Exclusive Waitlist</h3>
+                <form action="/join-waitlist" method="POST" class="space-y-4">
+                    <input type="email" name="email" placeholder="Work Email" class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:border-purple-500 focus:outline-none" required>
+                    <input type="text" name="company" placeholder="Company Name" class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:border-purple-500 focus:outline-none">
+                    <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-green-500 hover:opacity-90 text-white py-3 rounded-lg font-semibold transition">
+                        Join Exclusive Waitlist
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="grid md:grid-cols-3 gap-8 px-6 py-20 max-w-6xl mx-auto text-center">
+            <div class="glass neon-hover p-8 rounded-2xl border border-gray-800 transition">
+                <div class="text-4xl mb-4">📝</div>
+                <h3 class="text-xl font-bold mb-2">AI Blog Articles</h3>
+                <p class="text-gray-400">SEO-optimized long-form content with your tone and brand voice.</p>
+            </div>
+            <div class="glass neon-hover p-8 rounded-2xl border border-gray-800 transition">
+                <div class="text-4xl mb-4">📱</div>
+                <h3 class="text-xl font-bold mb-2">Social Media Posts</h3>
+                <p class="text-gray-400">Platform-specific posts with hashtags and visual ideas.</p>
+            </div>
+            <div class="glass neon-hover p-8 rounded-2xl border border-gray-800 transition">
+                <div class="text-4xl mb-4">✉️</div>
+                <h3 class="text-xl font-bold mb-2">Marketing Copy</h3>
+                <p class="text-gray-400">Generate ads, product descriptions, and landing page content instantly.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glass text-center py-8 border-t border-gray-800 text-gray-400 mx-4 mb-4 rounded-2xl">
+            <p>© 2025 PakNexusAI. All rights reserved. Built with 💚 in Pakistan 🇵🇰</p>
+        </footer>
+    </div>
+</body>
+</html>
