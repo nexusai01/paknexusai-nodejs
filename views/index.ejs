@@ -75,7 +75,7 @@
             box-shadow: 0 0 15px #9333ea, 0 0 25px #22c55e;
             transition: all 0.4s ease;
         }
-        
+
         /* === MOBILE RESPONSIVENESS FIXES === */
 @media (max-width: 768px) {
     /* Navigation fixes */
@@ -192,17 +192,38 @@
 
     <!-- All main content -->
     <div class="relative z-10">
-        <!-- Navbar -->
-        <header class="glass flex justify-between items-center px-6 py-4 border-b border-gray-800 mx-4 mt-4 rounded-2xl">
-            <h1 class="text-2xl font-bold text-purple-400">PakNexusAI</h1>
-            <nav class="space-x-6 text-gray-300">
-                <a href="#" class="hover:text-purple-400">Features</a>
-                <a href="#" class="hover:text-purple-400">Pricing</a>
-                <a href="#" class="hover:text-purple-400">Use Cases</a>
-                <a href="#" class="hover:text-purple-400">Blog</a>
-                <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">Login</button>
-            </nav>
-        </header>
+    
+        <!-- Navigation with Hamburger Menu -->
+<header class="glass flex justify-between items-center px-6 py-4 border-b border-gray-800 mx-4 mt-4 rounded-2xl">
+    <h1 class="text-2xl font-bold text-purple-400">PakNexusAI</h1>
+    
+    <!-- Desktop Navigation (hidden on mobile) -->
+    <nav class="hidden md:flex space-x-6 text-gray-300">
+        <a href="#features" class="hover:text-purple-400">Features</a>
+        <a href="#pricing" class="hover:text-purple-400">Pricing</a>
+        <a href="#use-cases" class="hover:text-purple-400">Use Cases</a>
+        <a href="#blog" class="hover:text-purple-400">Blog</a>
+        <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">Login</button>
+    </nav>
+
+    <!-- Hamburger Button (visible only on mobile) -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-300"></span>
+        <span class="w-6 h-0.5 bg-gray-300"></span>
+        <span class="w-6 h-0.5 bg-gray-300"></span>
+    </button>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden absolute top-24 left-0 right-0 glass border-t border-gray-800 mx-4 rounded-2xl z-50">
+        <div class="flex flex-col p-4 space-y-4">
+            <a href="#features" class="text-gray-300 hover:text-purple-400 py-2 border-b border-gray-800">Features</a>
+            <a href="#pricing" class="text-gray-300 hover:text-purple-400 py-2 border-b border-gray-800">Pricing</a>
+            <a href="#use-cases" class="text-gray-300 hover:text-purple-400 py-2 border-b border-gray-800">Use Cases</a>
+            <a href="#blog" class="text-gray-300 hover:text-purple-400 py-2 border-b border-gray-800">Blog</a>
+            <button class="bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg mt-2">Login</button>
+        </div>
+    </div>
+</header>
 
         <!-- Hero Section -->
         <section class="text-center py-24 px-4">
@@ -252,5 +273,28 @@
             <p>© 2025 PakNexusAI. All rights reserved. Built with 💚 in Pakistan 🇵🇰</p>
         </footer>
     </div>
+    <script>
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+</script>
 </body>
 </html>
