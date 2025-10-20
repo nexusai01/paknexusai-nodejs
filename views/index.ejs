@@ -75,6 +75,111 @@
             box-shadow: 0 0 15px #9333ea, 0 0 25px #22c55e;
             transition: all 0.4s ease;
         }
+        
+        /* === MOBILE RESPONSIVENESS FIXES === */
+@media (max-width: 768px) {
+    /* Navigation fixes */
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center !important;
+    }
+    
+    nav a, nav button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Hero section fixes */
+    .text-4xl.md\\:text-6xl {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .text-xl {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Waitlist card fixes */
+    .max-w-md {
+        margin: 0 1rem;
+        padding: 1.5rem !important;
+    }
+    
+    /* Feature grid fixes */
+    .grid.md\\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .p-8 {
+        padding: 1.5rem !important;
+    }
+    
+    /* Orb size reduction for mobile */
+    .orb-1 {
+        width: 250px !important;
+        height: 250px !important;
+        top: 5% !important;
+        left: 5% !important;
+    }
+    
+    .orb-2 {
+        width: 200px !important;
+        height: 200px !important;
+        bottom: 5% !important;
+        right: 5% !important;
+    }
+    
+    /* Section padding fixes */
+    .py-24 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Text size adjustments */
+    .text-2xl {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+    .text-4xl.md\\:text-6xl {
+        font-size: 1.75rem !important;
+    }
+    
+    .glass {
+        margin: 0 0.5rem;
+    }
+    
+    .orb-1 {
+        width: 180px !important;
+        height: 180px !important;
+    }
+    
+    .orb-2 {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    /* Better touch targets */
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Input field sizing */
+    input, button {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+}
     </style>
 </head>
 
